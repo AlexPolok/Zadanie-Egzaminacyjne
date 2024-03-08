@@ -47,14 +47,14 @@
     <script>
         const generujPrzycisk = document.querySelector('button');
         const poleEdycji = document.querySelector('input[type="number"]');
-        generujPrzycisk.addEventListener('click', function() {
+        generujPrzycisk.addEventListener('click', function(){
             const wartoscH = parseInt(poleEdycji.value);
             const komorki = document.querySelectorAll('table td');
-            for (let i = 0; i < komorki.length; i++) {
+            for(let i = 0; i < komorki.length; i++){
                 let wartoscS;
-                if (i < 4) {
+                if(i < 4){
                     wartoscS = 1 - (i * 0.2);
-                } else {
+                } else{
                     wartoscS = 0.2;
                 }
                 const kolorHSL = `hsl(${wartoscH}, ${wartoscS * 100}%, 50%)`;
